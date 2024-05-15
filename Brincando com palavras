@@ -1,0 +1,30 @@
+// criar a tela para escrever
+function setup() {
+  createCanvas(800, 700);
+}
+
+// Cor da tela e texto, tamanho da fonte
+function draw() {
+  background("pink");
+  fill("green");
+  textSize(100);
+  textAlign(CENTER, CENTER)
+ 
+  //Variavel que cria cada letra na tela 
+  let maximo = width;
+  let minimo = -0;
+  let palavra = "Perfeição = Fafy";
+  let quantidade = map(mouseX, 0, width, 1, palavra.length);
+  let parcial = palavra.substring(0,quantidade);
+ 
+  //comando para posição da palavra nos eixos da tela canvas
+  text(parcial,400,350);
+  
+//  if(mouseX < 50){
+//    let palavra = "P";
+//    text(palavra, 400, 350);
+//  } else {
+//    let palavra = "Perfeição";
+//    text(palavra, 400, 350);
+//  }
+}
